@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
+    "font-awesome": "^4.7.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-fontawesome": "^1.6.1",
     "react-transition-group": "^2.0.2",
     "reactstrap": "^4.8.0"
   },
