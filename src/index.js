@@ -1,11 +1,29 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+
+import reducer from './reducers'
+
 import './index.css'
-import registerServiceWorker from './registerServiceWorker'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'font-awesome/css/font-awesome.css'
 
-ReactDOM.render(<App />, document.getElementById('root'))
 import App from './components/App'
+import registerServiceWorker from './registerServiceWorker'
+
+import developmentState from './data/developmentState'
+
+let store = createStore(reducer, developmentState)
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+
+  document.getElementById('root')
+)
+
 registerServiceWorker()
